@@ -10,7 +10,7 @@ const app = express();
 
 // Теперь клиент имеет доступ только к публичным файлам
 app.use(
-    //cors,
+    cors,
     bodyParser.json(), 
     express.static(path.join(__dirname, 'public')),
     mainRoute,
